@@ -1,9 +1,47 @@
-/* Here we can set styles for this lab page that we don't want to effect others pages */
 
-/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
-.minor-section {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
+p {
+    font-weight: bold;
+    font-size: 125%;
+    font-style:italic;
+    color: slateblue;
+    font-family:'Courier New', Courier, monospace;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer {
+    font-weight: bold;
+    font-size: 125%;
+    font-style:italic;
+    color: slategray;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+body {
+    background-color: gold;
+    border-top-color: goldenrod;
+    border-bottom-color: coral;
+    border-left-color: burlywood;
+    border-right-color:peachpuff;
+    border-style: inset;
   }
+  
+  h1 {
+    color: firebrick;
+    font-size: 300%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 125%;
+    font-style:italic;
+    color:mediumorchid;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+
