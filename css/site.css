@@ -19,6 +19,10 @@ h1 {
   font-size: 200%;
 }
 
+p {
+  color: cadetblue;
+}
+
 /* the hashtag in a CSS selector selects an element by id, e.g., id="content" */
 #content {
   margin: 10px;
