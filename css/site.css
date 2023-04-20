@@ -9,7 +9,9 @@ body {
 }
 
 /* we can have rules apply to multiple elements at the same time with commas */
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   font-family: sans-serif;
 }
 
@@ -27,26 +29,27 @@ p {
 h3 {
   writing-mode: sideways-lr;
   transform: rotate(45deg);
-  text-align:center;
+  text-align: center;
   font-size: 40px;
   padding-top: 100px;
-  padding-bottom:100px;
-  color:crimson;
+  padding-bottom: 100px;
+  color: crimson;
   letter-spacing: 8px;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
 
 sub {
-  font-size:11px;
+  font-size: 11px;
   letter-spacing: 1px;
-  color:rgb(255, 72, 72)
+  color: rgb(255, 72, 72)
 }
 
 footer {
   font-size: 14px;
-  color:gainsboro;
+  color: gainsboro;
 }
+
 /* the hashtag in a CSS selector selects an element by id, e.g., id="content" */
 #content {
   margin: 10px;
@@ -77,13 +80,13 @@ a {
 }
 
 i {
-  color:whitesmoke;
+  color: whitesmoke;
 }
 
 b {
-  color:rgb(159, 0, 211);
+  color: rgb(159, 0, 211);
 }
 
-a i b{
-  color:mediumvioletred;
+a i b {
+  color: mediumvioletred;
 }
