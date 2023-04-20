@@ -3,8 +3,9 @@
 /* you can pick your own background colors, text colors, and fonts */
 
 /* we can select an html element tag, in this case "body" will apply to the whole document */
+
 body {
-  background-color: #50808E;
+  background-color: #eded64;
 }
 
 /* we can have rules apply to multiple elements at the same time with commas */
@@ -20,15 +21,38 @@ h1 {
 }
 
 p {
-  color: cadetblue;
+  color: rgb(246, 255, 0);
 }
 
+h3 {
+  writing-mode: sideways-lr;
+  transform: rotate(45deg);
+  text-align:center;
+  font-size: 40px;
+  padding-top: 100px;
+  padding-bottom:100px;
+  color:crimson;
+  letter-spacing: 8px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+sub {
+  font-size:11px;
+  letter-spacing: 1px;
+  color:rgb(255, 72, 72)
+}
+
+footer {
+  font-size: 14px;
+  color:gainsboro;
+}
 /* the hashtag in a CSS selector selects an element by id, e.g., id="content" */
 #content {
   margin: 10px;
   padding: 10px;
   border: solid 1px #888;
-  background-color: #84B59F;
+  background-color: #b79dda;
 }
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
@@ -36,5 +60,30 @@ p {
   padding: 10px;
   margin-bottom: 10px;
   border: solid 1px #888;
-  background-color: #A3C9A8;
+  background-color: black;
+}
+
+.my-portrait {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+}
+
+
+a {
+  color: rgb(143, 2, 91);
+  font-weight: bold;
+}
+
+i {
+  color:whitesmoke;
+}
+
+b {
+  color:rgb(159, 0, 211);
+}
+
+a i b{
+  color:mediumvioletred;
 }
