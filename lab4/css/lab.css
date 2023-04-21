@@ -9,25 +9,36 @@
   }
 
   p {
+    font-size: 18px;
     color: rgb(210, 141, 240);
+    font-family:'Courier New', Courier, monospace;
   }
 
   ul {
+    font-size: 15px;
     color: rgb(246, 254, 0);
+    font-family:Arial, Helvetica, sans-serif;
   }
 
   ol {
     color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
   }
 
   h2 {
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   ul ul {
     color:rgb(210, 141, 240);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   code {
     color:azure;
+  }
+
+  img {
+    max-width: 60%;
   }
