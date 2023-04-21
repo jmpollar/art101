@@ -1,47 +1,217 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<!-- This title is used for tabs and bookmarks -->
 	<title>Lab X - Subject/Topic</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
-  	<meta charset="UTF-8" />
+	<meta charset="UTF-8" />
 	<!-- Set viewport so page remains consistently scaled w narrow devices -->
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 	<!-- Include a sitewide CSS file for consistent styling across the site -->
 	<link rel="stylesheet" type="text/css" href="../css/site.css">
 	<!-- Lab-specifc CSS file for any special styling of this particular page -->
 	<link rel="stylesheet" type="text/css" href="css/lab.css">
-	
+
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
 	<script type="text/javascript" src="./js/lab.js" DEFER></script>
 </head>
+
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
 		<section>
-			<h1>Lab X - Subject/Topic</h1>
+			<h1>Lab 4 - Pseudocoding and Problem-solving </h1>
 			<div class="minor-section">
-					<h2>Challenge</h2>
-					<p>Restate the challenge of the lab here.</p>
+				<h2>Challenge</h2>
+				<p>
+					The challenge is to:
+				<ul>
+					Write pseudocode for an everyday task.
+				</ul>
+				<ul>
+					Write pseudocode for a simple computer game.
+				</ul>
+				<ul>
+					Introduce ourselves to Javascript comments by inserting pseudocode into this lab's lab.js file.
+				</ul>
+				<ul>
+					Include our pseudocode as lists in our lab 4 index.html file.
+				</ul>
+
+				</p>
 			</div>
 
 			<div class="minor-section">
-					<h2>Problems</h2>
-					<p>What problems arose? How did you solve them? </p>
+				<h2>Problems</h2>
+				<p>
+					We had a bit of trouble using ChatGPT to give us pseudocode for banana bread.
+				<ul>
+					We remedied this by indicating "pseudocode without code".
+				</ul>
+				</p>
 			</div>
 
 			<div class="minor-section">
-					<h2>Reflection</h2>
-					<p>Put your reflections about this assignment here. How did it go? What kind of energy did you put into the assignment? </p>
+				<h2>Reflection</h2>
+				<p>
+				<ol>
+					<li>I met my partner in section on Thursday, 4-20.</li>
+					<li>We decided we would do Rock, Paper, Scissors for the section activity.</li>
+					<li>We then decided to keep this game for our pseudocode.</li>
+					<li>I wrote out pseudocode for it, and checked it against the pseudocode written by ChatGPT.</li>
+					<li>We also wrote pseudocode for the everyday task, but that mostly consisted of choosing a food
+						and plugging that into ChatGPT for a recipe.</li>
+					<li>We then adapted that recipe into steps and substeps.</li>
+				</ol>
+				</p>
+				<p>
+					I attempted to make effective use of nested lists for this assignment to separate tasks and
+					subtasks, as well as color-code them. Even in the recipe, I felt things weren't separated enough so
+					I made it a goal to make every verb its own step. For the game, I attempted to use coding keywords but still keep things at English level. 
+					I made sure to include input validation and an if() sequence as well.
+				</p>
 			</div>
 
 			<div class="minor-section">
-					<h2>Results</h2>
-					<div id="output"></div>
+				<h2>Results</h2>
+				<div id="output">
+					<p><b>Banana Bread Recipe Pseudocode</b></p>
+					<ol>
+						<li>
+							Gather your ingredients:
+							<ul>
+								3 bananas
+								<ul>
+									Mash them.
+								</ul>
+							</ul>
+							<ul>
+								1/3 cup butter
+								<ul>
+									Melt it.
+								</ul>
+							</ul>
+							<ul>
+								1 teaspoon baking soda
+							</ul>
+							<ul>
+								A pinch of salt
+							</ul>
+							<ul>
+								3/4 cup sugar
+							</ul>
+							<ul>
+								1 large egg
+								<ul>
+									Beat it.
+								</ul>
+							</ul>
+							<ul>
+								1 teaspoon vanilla extract
+							</ul>
+							<ul>
+								1 1/2 cups flour, all-purpose
+							</ul>
+						</li>
+						<li>
+							Preheat the oven to 350 degrees F (175 degrees C)
+						</li>
+						<li>
+							Acquire a 9x5 inch loaf pan
+							<ul>
+								Grease it.
+							</ul>
+						</li>
+						<li>
+							Add the melted butter to the mashed bananas.
+							<ul>
+								Stir well.
+							</ul>
+						</li>
+						<li>
+							Add the baking soda and salt to the mix.
+							<ul>
+								Stir.
+							</ul>
+						</li>
+						<li>
+							Add the sugar, beaten egg, and vanilla extract to the mix.
+							<ul>
+								Stir.
+							</ul>
+						</li>
+						<li>
+							Add the flour.
+							<ul>
+								Mix until combined.
+								<ul>
+									DO not overmix.
+								</ul>
+							</ul>
+						</li>
+						<li>
+							Pour the batter into the greased loaf pan.
+						</li>
+						<li>
+							Bake for 50-60 minutes OR until a toothpick inserted into the center comes out without
+							residue.
+						</li>
+						<li>
+							Remove the banana bread from the oven.
+						</li>
+						<li>
+							Let it cool in the pan for 5 minutes.
+						</li>
+						<li>
+							Transfer the bread to a wire rack.
+						</li>
+						<li>
+							Let the bread cool completely.
+							<ul>
+								Slice.
+							</ul>
+							<ul>
+								Serve.
+							</ul>
+						</li>
+					</ol>
+					<p><b>Rock Paper Scissors Javascript Comment Pseudocode</b></p>
+					<pre><code>
+						/*Steps for Rock Paper Scissors*/
+						//Request input from player (1: rock, 2: paper, 3: scissors)
+						  //if(input>3 || input < 1) {error; re-request input}
+						  //assign to int variable playerChoice
+						//have computer produce RNG between 1 and 3
+						  //assign this to int variable computerChoice
+						//if statements for outcomes:
+						  //if(computer = rock and player = scissors)
+							//computer wins!
+						  //if(computer = paper and player = scissors)
+							//player wins!
+						  //if(computer = scissors and player = scissors)
+							//tie!
+						  //if(player = rock and computer = rock)
+							//tie!
+						  //if(player = rock and computer = paper)
+							//computer wins!
+						  //if(player = rock and computer = scissors)
+							//player wins!
+						  //if(player = paper and computer = rock)
+							//player wins!
+						  //if(player = paper and computer = paper)
+							//tie!
+						  //if(player = paper and computer = scissors)
+							//computer wins!
+						//Show graphics based on computer and player selection
+						//print result of if cluster above
+						//program complete
+					</code></pre>
+				</div>
 			</div>
 		</section>
 		<nav id="links">
@@ -49,4 +219,5 @@
 		</nav>
 	</main>
 </body>
+
 </html>

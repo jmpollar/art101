@@ -5,5 +5,29 @@
     padding: 10px;
     margin-bottom: 10px;
     border: solid 1px #888;
-    background-color: #DDD8C4;
+    background-color: #000000;
+  }
+
+  p {
+    color: rgb(210, 141, 240);
+  }
+
+  ul {
+    color: rgb(246, 254, 0);
+  }
+
+  ol {
+    color: white;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  ul ul {
+    color:rgb(210, 141, 240);
+  }
+
+  code {
+    color:azure;
   }
