@@ -16,7 +16,7 @@ var model = "Civic";
 var color = "Blue";
 
 // calculate age
-function calcAge(yearG , currentYearG) {
+function calcAge(yearG, currentYearG) {
   return currentYearG - yearG;
 }
 
