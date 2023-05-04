@@ -50,4 +50,5 @@ sortedUsername = UserNameSort(userName);
 //validate code
 console.log(sortedUsername);
 //use document.writeln to output the sorted name
+document.writeln("ORIGINAL USERNAME: " + userName + ".<br><br>");
 document.writeln("SORTED USERNAME: " + sortedUsername +".<br><br>");
