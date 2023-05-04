@@ -34,8 +34,7 @@ document.writeln("SORTED USERNAME:\n" + sortedUsername +".<br><br>");
 userName = window.prompt("-------------------------------------------\nENTER YOUR USERNAME");
 
 //declare usernamesort function to take username as param
-function UserNameSort(uName)
-{
+function UserNameSort(uName) {
   //convert to array
   userNameArr = uName.split('');
   //sort array
@@ -45,15 +44,27 @@ function UserNameSort(uName)
   //return sorted username
   return uName;
 }
-//assign to variable
+function UserNameSortRev(uName) {
+  //convert to array
+  userNameArr = uName.split('');
+  //sort array
+  userNameArr.sort();
+  userNameArr.reverse();
+  //put back to string
+  uName = userNameArr.join('');
+  //return sorted username
+  return uName;
+}
+//assign to variables
 sortedUsername = UserNameSort(userName);
+sortedRevUsername = UserNameSortRev(userName);
 //access username
-function userNameGet()
-{
+function userNameGet() {
   return userName;
 }
 //validate code
 console.log(sortedUsername);
 //use document.writeln to output the sorted name
 document.writeln("ORIGINAL USERNAME: " + userNameGet() + ".<br><br>");
-document.writeln("SORTED USERNAME: " + sortedUsername +".<br><br>");
+document.writeln("SORTED USERNAME: " + sortedUsername + ".<br><br>");
+document.writeln("REVERSE SORTED USERNAME: " + sortedRevUsername + ".<br><br>");
