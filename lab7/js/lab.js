@@ -62,9 +62,14 @@ sortedRevUsername = UserNameSortRev(userName);
 function userNameGet() {
   return userName;
 }
+
+//access reverse username
+function userNameRevGet() {
+  return sortedRevUsername;
+}
 //validate code
 console.log(sortedUsername);
 //use document.writeln to output the sorted name
 document.writeln("ORIGINAL USERNAME: " + userNameGet() + ".<br><br>");
 document.writeln("SORTED USERNAME: " + sortedUsername + ".<br><br>");
-document.writeln("REVERSE SORTED USERNAME: " + sortedRevUsername + ".<br><br>");
+document.writeln("REVERSE SORTED USERNAME: " + userNameRevGet() + ".<br><br>");
