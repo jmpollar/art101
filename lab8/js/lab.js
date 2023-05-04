@@ -1,29 +1,38 @@
-// index.js - Use JavaScript to explore arrays and objects
+// index.js - Use JavaScript to explore Anonymous & Callback functions 
 // Author: James Pollard
-// Date: 4/27/2023
+// Date: 5/4/2023
 
 // Constants
+//declare array
+numArr = [0, 3, -2, -99, -4, -5, 95, 37, 59, 84775, 20849, 2];
 
 // Functions
-//declare myTransport array
-myTransport = ["car"];
+//create a named function that will take a single parameter, do a calculation on it, and return the result
+function ArrayExponentials(val) {
+  //square the param
+  var results = val * val;
+  return (results + " equals " + val + "^2.");
+}
 
-currentYear = 2023;
+//use map on array using the function as a callback to operate on all the numbers in the array
+//assign it to a variable
+squaredArray = numArr.map(ArrayExponentials);
 
-//create an object for this primary transport
-myMainRide = {
-  year: 2022,
-  make: "Honda",
-  model: "Civic",
-  color: "Blue",
-  //internal function to determine age val
-  age: function() {
-    return currentYear - this.year;
+//now use a new anonymous function as a callback with map to do some new operation on each of the numbes in your array
+//assign variable for access
+divByThreeTester = numArr.map(function (x) {
+  var results = x % 3;
+  if (results == 0) {
+    //is divisible by 3
+    return x;
   }
-};
+  else {
+    //say it isn't divisible by 3
+    return ("Indivisible by 3.")
+  }
+});
 
-//print out my transports
-document.writeln("I move with my " + myTransport + ".<br><br>");
-//print out myMainRide
-document.writeln("My Main Ride: <pre>", JSON.stringify(myMainRide, null, '\t'), "</pre");
-document.writeln("<pre>Age: ", myMainRide.age(), "</pre>");
+//test!
+console.log(numArr);
+console.log(squaredArray);
+console.log(divByThreeTester);
