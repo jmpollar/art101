@@ -36,22 +36,22 @@ userName = window.prompt("-------------------------------------------\nENTER YOU
 //declare usernamesort function to take username as param
 function UserNameSort(uName) {
   //convert to array
-  userNameArr = uName.split('');
+  var userNameArr = uName.split('');
   //sort array
   userNameArr.sort();
   //put back to string
-  uName = userNameArr.join('');
+  var uName = userNameArr.join('');
   //return sorted username
   return uName;
 }
 function UserNameSortRev(uName) {
   //convert to array
-  userNameArr = uName.split('');
+  var userNameArr = uName.split('');
   //sort array
   userNameArr.sort();
   userNameArr.reverse();
   //put back to string
-  uName = userNameArr.join('');
+  var uName = userNameArr.join('');
   //return sorted username
   return uName;
 }
