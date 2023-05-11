@@ -9,17 +9,20 @@ outputEl = document.getElementById('output');
 new1El = document.createElement('p');
 
 //change the html attribute of new1El to say something new by using setAttribute (working?)
-new1El.id = "challenge-p";
+new1El.id = "results-p";
 
 //create another element and assign it to a variable new2El
 new2El = document.createElement('img');
 
 //change the html attribute of new2El to say something else (working?)
-new2El.id = "problems-p";
+new2El.id = "results-h3";
 
 //append new1El and new2El to outputEl
 outputEl.appendChild(new1El);
 outputEl.appendChild(new2El);
 
 //change css attributes of at least 2 elements on the page
-new1El.style.color = red;
+new1El.style.color = "blue";
+new1El.innerHTML = "This is my new1El text!";
+new2El.style.color = "red";
+new2El.innerHTML = "This is my new2El text!";
