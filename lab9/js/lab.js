@@ -21,6 +21,15 @@ new2El.id = "results-h3";
 outputEl.appendChild(new1El);
 outputEl.appendChild(new2El);
 
+//TASK X: declare a new El to add to the top of outputEl
+new3El = document.createElement('img');
+//assign it to the pizza picture
+new3El.src = "img/pizza.jpg";
+//assign its id
+new3El.id = "results-img";
+//add to the top of outputEl
+outputEl.prepend(new3El);
+
 //change css attributes of at least 2 elements on the page
 new1El.style.color = "orange";
 new1El.style.fontSize = "x-large";
@@ -34,3 +43,4 @@ new2El.style.fontSize = "xx-large";
 new2El.innerHTML = "This is my new2El h3 text!";
 new2El.style.fontFamily = "Courier,serif";
 new2El.style.textAlign = "center";
+new3El.style.border = "30px ridge #fff";
