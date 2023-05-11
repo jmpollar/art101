@@ -1,29 +1,25 @@
-// index.js - Use JavaScript to explore arrays and objects
+// index.js - Use JavaScript to manipulate the DOM of the index.html page
 // Author: James Pollard
-// Date: 4/27/2023
+// Date: 5/10/2023
 
-// Constants
+//find output div and assign to var outputEl
+outputEl = getElementById('output');
 
-// Functions
-//declare myTransport array
-myTransport = ["car"];
+//create new element with document.createElement("p") and assign it ot a variable new1El
+new1El = document.createElement('p');
 
-currentYear = 2023;
+//change the html attribute of new1El to say something new by using setAttribute (working?)
+new1El.setAttribute('id', 'challenge-p');
 
-//create an object for this primary transport
-myMainRide = {
-  year: 2022,
-  make: "Honda",
-  model: "Civic",
-  color: "Blue",
-  //internal function to determine age val
-  age: function() {
-    return currentYear - this.year;
-  }
-};
+//create another element and assign it to a variable new2El
+new2El = document.createElement('img');
 
-//print out my transports
-document.writeln("I move with my " + myTransport + ".<br><br>");
-//print out myMainRide
-document.writeln("My Main Ride: <pre>", JSON.stringify(myMainRide, null, '\t'), "</pre");
-document.writeln("<pre>Age: ", myMainRide.age(), "</pre>");
+//change the html attribute of new2El to say something else (working?)
+new2El.setAttribute('id', 'problems-p');
+
+//append new1El and new2El to outputEl
+outputEl.appendChild(new1El);
+outputEl.appendChild(new2El);
+
+//change css attributes of at least 2 elements on the page
+new1El.setAttribute('font-size', '100px');
