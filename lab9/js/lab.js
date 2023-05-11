@@ -44,3 +44,4 @@ new2El.innerHTML = "This is my new2El h3 text!<br>Cheesy! Saucy! Boy am I hungry
 new2El.style.fontFamily = "Courier,serif";
 new2El.style.textAlign = "center";
 new3El.style.border = "30px ridge #fff";
+new3El.style.maxWidth = "40%";

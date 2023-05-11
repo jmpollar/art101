@@ -19,6 +19,11 @@ ol {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+ul {
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 h2 {
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
