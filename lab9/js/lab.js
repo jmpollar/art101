@@ -22,7 +22,15 @@ outputEl.appendChild(new1El);
 outputEl.appendChild(new2El);
 
 //change css attributes of at least 2 elements on the page
-new1El.style.color = "blue";
-new1El.innerHTML = "This is my new1El text!";
-new2El.style.color = "red";
-new2El.innerHTML = "This is my new2El text!";
+new1El.style.color = "orange";
+new1El.style.fontSize = "x-large";
+new1El.style.fontFamily = "Impact,sans-serif";
+new1El.style.letterSpacing = "4px";
+new1El.style.textAlign = "center";
+new1El.style.paddingBottom = "10px";
+new1El.innerHTML = "This is my new1El paragraph text!";
+new2El.style.color = "green";
+new2El.style.fontSize = "xx-large";
+new2El.innerHTML = "This is my new2El h3 text!";
+new2El.style.fontFamily = "Courier,serif";
+new2El.style.textAlign = "center";
