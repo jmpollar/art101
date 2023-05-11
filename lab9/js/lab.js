@@ -12,7 +12,7 @@ new1El = document.createElement('p');
 new1El.id = "results-p";
 
 //create another element and assign it to a variable new2El
-new2El = document.createElement('img');
+new2El = document.createElement('h3');
 
 //change the html attribute of new2El to say something else (working?)
 new2El.id = "results-h3";
