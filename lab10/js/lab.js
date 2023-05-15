@@ -1,29 +1,43 @@
-// index.js - Use JavaScript to explore arrays and objects
+// index.js - Use event listeners in Javascript to process and manipulate input; manipulate the DOM to display these new values
 // Author: James Pollard
-// Date: 4/27/2023
+// Date: 5/15/23
 
-// Constants
+//rip the nameSort function from lab 7
 
-// Functions
-//declare myTransport array
-myTransport = ["car"];
-
-currentYear = 2023;
-
-//create an object for this primary transport
-myMainRide = {
-  year: 2022,
-  make: "Honda",
-  model: "Civic",
-  color: "Blue",
-  //internal function to determine age val
-  age: function() {
-    return currentYear - this.year;
+//declare usernamesort function to take username as param
+function UserNameSort(uName) {
+  //type checking: always needs to be a string
+  if(typeof uName != "string")
+  {
+    console.log("converting to string...");
+    String(uName);
   }
-};
+  //convert to array
+  var userNameArr = uName.split('');
+  //sort array
+  userNameArr.sort();
+  //put back to string
+  var uName = userNameArr.join('');
+  //return sorted username
+  return uName;
+}
 
-//print out my transports
-document.writeln("I move with my " + myTransport + ".<br><br>");
-//print out myMainRide
-document.writeln("My Main Ride: <pre>", JSON.stringify(myMainRide, null, '\t'), "</pre");
-document.writeln("<pre>Age: ", myMainRide.age(), "</pre>");
+//access the results div and assign to variable for manipulation
+var divEl = document.getElementById("output");
+
+//add an event listener to the button that:
+//gets val of input field
+//calls UNS function with input as a param
+//assigns that return value to a variable
+//replaces the html in <div id=output> with the results
+
+var buttonEl = document.getElementById('my-button');
+//change the button size for accessibility
+buttonEl.style.height = "20px";
+buttonEl.style.width = "20px";
+
+buttonEl.addEventListener('click', function() {
+	var inputGet = document.getElementById("user-name");
+  var sortedInput = UserNameSort(inputGet.value);
+  divEl.innerHTML = "<br>Original username: " + inputGet.value + "<br><br>Sorted username: " + sortedInput;
+});
