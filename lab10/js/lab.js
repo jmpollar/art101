@@ -44,6 +44,8 @@ buttonEl.addEventListener('click', function () {
 //GLITCHY STUFF
 var buttonElCursed = document.getElementById("glitch-button");
 
+var elevatorMusic = document.createElement("audio");
+
 //change the button size for accessibility
 buttonElCursed.style.height = "20px";
 buttonElCursed.style.width = "20px";
@@ -99,7 +101,6 @@ buttonElCursed.addEventListener('click', function () {
     case 6:
       //Airport Lounge by Kevin MacLeod 
       //https://www.chosic.com/download-audio/44169/
-      var elevatorMusic = document.createElement("audio");
       elevatorMusic.src = "./audio/elevatorz.mp3";
       elevatorMusic.play();
       buttonElCursed.hidden = true;
@@ -146,6 +147,7 @@ buttonElCursed.addEventListener('click', function () {
       buttonElCursed.hidden = false;
       cursedLabel.style.marginLeft = "15px";
       cursedLabel.style.marginRight = "15px";
+      cursedLabel.style.marginTop = "60px";
       cursedLabel.innerHTML = "I LEARNED MY LESSON";
       cursedLabel.style.color = "white";
 
@@ -155,6 +157,8 @@ buttonElCursed.addEventListener('click', function () {
     case 7:
       //reload the page
       alert("thank you.");
+      elevatorMusic.pause();
+
       location.reload();
       break;
 
