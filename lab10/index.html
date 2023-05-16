@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<!-- This title is used for tabs and bookmarks -->
 	<title>Lab 10 - JavaScript Events and Forms</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
-  	<meta charset="UTF-8" />
+	<meta charset="UTF-8" />
 	<!-- Set viewport so page remains consistently scaled w narrow devices -->
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 	<!-- Include a sitewide CSS file for consistent styling across the site -->
 	<link rel="stylesheet" type="text/css" href="../css/site.css">
 	<!-- Lab-specifc CSS file for any special styling of this particular page -->
 	<link rel="stylesheet" type="text/css" href="css/lab.css">
-	
+
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
 	<script type="text/javascript" src="./js/lab.js" DEFER></script>
 </head>
+
 <body id="main-body">
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
@@ -33,18 +35,21 @@
 			<button id="my-button" name="button-name"></button>
 			<h1>Lab 10 - JavaScript Events and Forms</h1>
 			<div class="minor-section">
-					<h2>Challenge</h2>
-					<p></p>
+				<h2>Challenge</h2>
+				<p>The challenge was to use event listeners in Javascript to process and manipulate input and to
+					manipulate the DOM to display these new values.</p>
 			</div>
 
 			<div class="minor-section">
-					<h2>Problems</h2>
-					<p></p>
+				<h2>Problems</h2>
+				<p>I had trouble figuring out how to add a name to the input. My solution was that I had to put a label tag to initialize the name variable then assign that to the input name next.</p>
+				<p>My first time testing tasks 2.1-2.3, index.html didn't display the results and thre the error: uName.split is not a function. My solution to this was adding type checking, but this wasn't the issue; I had accessed the entire element, and not its contents, so instead I accessed inputGet.value.</p>
+				<p>I also got the error: failed to execute write on Document (async error) on remote page. The solution was that I had to reload the page, as the JS code hadn't loaded into GitHub yet.</p>
 			</div>
 
 			<div class="minor-section">
-					<h2>Reflection</h2>
-					<p></p>
+				<h2>Reflection</h2>
+				<p>I thought this lab was fun. I especially enjoyed task x, and by the variable names and atmosphere of the "cursed button", you can probably tell I tried to make an ominous-yet-goofy approach to having some being in the program glitching out the page because you pressed the forbidden button too many times. It was a bit of a chore getting the pizza pictures to display properly, but once I did, I had a blast randomizing all sorts of filter values for the images.</p>
 			</div>
 
 			<div class="minor-section">
@@ -52,7 +57,7 @@
 				<p></p>
 				<label for="output-name"><i>Output</i></label>
 				<div id="output" name="output-name">
-			
+
 				</div>
 			</div>
 		</section>
@@ -65,4 +70,5 @@
 		</nav>
 	</main>
 </body>
+
 </html>
