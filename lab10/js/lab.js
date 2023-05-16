@@ -127,8 +127,11 @@ buttonElCursed.addEventListener('click', function () {
         pizza.style.filter += blurStr;
         pizza.style.filter += invertStr;
         pizza.style.filter += saturateStr;
+
+        var rand7 = Math.floor(Math.random() * (361));
+        pizza.style.rotate(rand7);
       }
-      
+
       let cursedLabel = document.getElementById("cursed-label");
       mainEl.appendChild(cursedLabel);
       mainEl.appendChild(buttonElCursed);
