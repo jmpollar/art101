@@ -97,6 +97,11 @@ buttonElCursed.addEventListener('click', function () {
       break;
 
     case 6:
+      //Airport Lounge by Kevin MacLeod 
+      //https://www.chosic.com/download-audio/44169/
+      var elevatorMusic = document.createElement("audio");
+      elevatorMusic.src = "./audio/elevatorz.mp3";
+      elevatorMusic.play();
       buttonElCursed.hidden = true;
       //pizza
       var mainEl = document.getElementById("content");
