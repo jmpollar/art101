@@ -7,8 +7,7 @@
 //declare usernamesort function to take username as param
 function UserNameSort(uName) {
   //type checking: always needs to be a string
-  if(typeof uName != "string")
-  {
+  if (typeof uName != "string") {
     console.log("converting to string...");
     String(uName);
   }
@@ -36,8 +35,8 @@ var buttonEl = document.getElementById('my-button');
 buttonEl.style.height = "20px";
 buttonEl.style.width = "20px";
 
-buttonEl.addEventListener('click', function() {
-	var inputGet = document.getElementById("user-name");
+buttonEl.addEventListener('click', function () {
+  var inputGet = document.getElementById("user-name");
   var sortedInput = UserNameSort(inputGet.value);
   divEl.innerHTML = "<br>Original username: " + inputGet.value + "<br><br>Sorted username: " + sortedInput;
 });
@@ -52,10 +51,10 @@ buttonElCursed.style.width = "20px";
 //do different stuff based on how many times button has been clicked
 var timesCursedButtonClicked = 0;
 
-buttonElCursed.addEventListener('click', function() {
-	
+buttonElCursed.addEventListener('click', function () {
+
   timesCursedButtonClicked++;
-  switch(timesCursedButtonClicked) {
+  switch (timesCursedButtonClicked) {
     case 1:
       var h = window.innerHeight;
       var w = window.innerWidth;
@@ -69,6 +68,7 @@ buttonElCursed.addEventListener('click', function() {
       //take away the input field
       var inputGet = document.getElementById("user-name");
       inputGet.remove();
+      buttonEl.remove();
       alert("FINE. I'M TAKING AWAY YOUR STUPID PROGRAM");
       break;
 
@@ -80,34 +80,73 @@ buttonElCursed.addEventListener('click', function() {
       break;
 
     case 4:
-    //SIKE
-    //destroy links too
-    var linksEl = document.getElementById("links");
-    linksEl.remove();
-    //recolor the body and set it all black
-    bodyEl = document.getElementById("main-body");
-    bodyEl.style.background = "black";
-    var content = document.getElementById("content");
-    content.style.backgroundColor = "black";
-    alert("SIKE! YOU THOUGHT! Alright, one more time, just click me again, and I'll bring back a page");
-    break;
+      //SIKE
+      //destroy links too
+      var linksEl = document.getElementById("links");
+      linksEl.remove();
+      //recolor the body and set it all black
+      bodyEl = document.getElementById("main-body");
+      bodyEl.style.background = "black";
+      var content = document.getElementById("content");
+      content.style.backgroundColor = "black";
+      alert("SIKE! YOU THOUGHT! Alright, one more time, just click me again, and I'll bring back a page");
+      break;
 
     case 5:
       alert("Alright, just one more time. I promise.")
       break;
 
     case 6:
-      var h = window.innerHeight;
-      var w = window.innerWidth;
-      buttonElCursed.remove();
+      buttonElCursed.hidden = true;
       //pizza
-      var bod = document.getElementById("main-body");
-      var pizza = document.createElement("img");
-      bod.appendChild(pizza);
-      pizza.src = "./img/pizza.jpg";
-      pizza.style.width = w;
-      pizza.style.height = h;
+      var mainEl = document.getElementById("content");
+      for (let i = 0; i < 10000; i++) {
+        var pizza = document.createElement("img");
+        mainEl.appendChild(pizza);
+        pizza.src = "./img/pizza.jpg";
+        var rand1 = Math.floor(Math.random() * (151));
+        var h = window.innerHeight / rand1;
+        var w = window.innerWidth / rand1;
+        pizza.style.width = w + "px";
+        pizza.style.height = h + "px";
+        var rand2 = Math.floor(Math.random() * (101));
+        var grayStr = "grayscale(" + rand2 + "%)";
+        console.log(grayStr);
+        pizza.style.filter += grayStr;
+        var rand3 = Math.floor(Math.random() * (361));
+        var hueRotStr = "hue-rotate(" + rand3 + "deg)";
+        pizza.style.filter += hueRotStr;
+        var dropShadowStr = "drop-shadow(" + rand1 / 10 + "px " + rand2 / 10 + "px " + rand3 / 10 + "px " + "white";
+        pizza.style.filter += dropShadowStr;
+        var rand4 = Math.floor(Math.random() * (11));
+        var rand5 = Math.floor(Math.random() * (101));
+        var rand6 = Math.floor(Math.random() * (12));
+        var blurStr = "blur(" + rand4 + "px)";
+        var invertStr = "invert(" + rand5 + "%)";
+        var saturateStr = "saturate(" + rand6 + ")";
+        pizza.style.filter += blurStr;
+        pizza.style.filter += invertStr;
+        pizza.style.filter += saturateStr;
+      }
+      
+      let cursedLabel = document.getElementById("cursed-label");
+      mainEl.appendChild(cursedLabel);
+      mainEl.appendChild(buttonElCursed);
+      buttonElCursed.style.width = "20px";
+      buttonElCursed.style.height = "20px";
+      buttonElCursed.hidden = false;
+      cursedLabel.style.marginLeft = "15px";
+      cursedLabel.style.marginRight = "15px";
+      cursedLabel.innerHTML = "I LEARNED MY LESSON";
+      cursedLabel.style.color = "white";
+
       alert("pizza");
+      break;
+
+    case 7:
+      //reload the page
+      alert("thank you.");
+      location.reload();
       break;
 
 
