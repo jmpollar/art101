@@ -44,6 +44,7 @@ buttonEl.addEventListener('click', function () {
 //GLITCHY STUFF
 var buttonElCursed = document.getElementById("glitch-button");
 
+//background music
 var elevatorMusic = document.createElement("audio");
 
 //change the button size for accessibility
@@ -54,8 +55,9 @@ buttonElCursed.style.width = "20px";
 var timesCursedButtonClicked = 0;
 
 buttonElCursed.addEventListener('click', function () {
-
+  //increment
   timesCursedButtonClicked++;
+  //different things every time
   switch (timesCursedButtonClicked) {
     case 1:
       var h = window.innerHeight;
@@ -67,7 +69,7 @@ buttonElCursed.addEventListener('click', function () {
       break;
 
     case 2:
-      //take away the input field
+      //take away the input field and regular button
       var inputGet = document.getElementById("user-name");
       inputGet.remove();
       buttonEl.remove();
@@ -75,7 +77,7 @@ buttonElCursed.addEventListener('click', function () {
       break;
 
     case 3:
-      //destroy everything on the page except the button
+      //destroy almost everything on the page except the button
       var sectionEl = document.getElementById("main-section");
       sectionEl.remove();
       alert("ALRIGHT. TO GET YOUR INPUT BACK YOU GOTTA CLICK ME AGAIN! GOOD LUCK >:)");
@@ -101,12 +103,16 @@ buttonElCursed.addEventListener('click', function () {
     case 6:
       //Airport Lounge by Kevin MacLeod 
       //https://www.chosic.com/download-audio/44169/
+      //play the music
       elevatorMusic.src = "./audio/elevatorz.mp3";
       elevatorMusic.play();
+      //hide the button
       buttonElCursed.hidden = true;
       //pizza
       var mainEl = document.getElementById("content");
       for (let i = 0; i < 10000; i++) {
+        //create 10k instances of pizza and assign to pizza image; randomly assign
+        //size;grayscale;hue;dropShadow;blur;invert;saturate;rotation
         var pizza = document.createElement("img");
         mainEl.appendChild(pizza);
         pizza.src = "./img/pizza.jpg";
@@ -138,16 +144,24 @@ buttonElCursed.addEventListener('click', function () {
         var rotateStr = "rotate(" + rand7 + "deg)";
         pizza.style.transform = rotateStr;
       }
-
+      //access the label of the cursed button. Assign it and the cursed button as child of the main Element
       let cursedLabel = document.getElementById("cursed-label");
       mainEl.appendChild(cursedLabel);
       mainEl.appendChild(buttonElCursed);
+      
+      //put the size back to normal
       buttonElCursed.style.width = "20px";
       buttonElCursed.style.height = "20px";
+
+      //show the button
       buttonElCursed.hidden = false;
+
+      //give it space
       cursedLabel.style.marginLeft = "15px";
       cursedLabel.style.marginRight = "15px";
       cursedLabel.style.marginTop = "60px";
+
+      //change the label of the cursed button, make it readable on black screen
       cursedLabel.innerHTML = "I LEARNED MY LESSON";
       cursedLabel.style.color = "white";
 
@@ -155,7 +169,7 @@ buttonElCursed.addEventListener('click', function () {
       break;
 
     case 7:
-      //reload the page
+      //reload the page and pause the music
       alert("thank you.");
       elevatorMusic.pause();
 
