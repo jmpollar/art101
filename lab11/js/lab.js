@@ -3,6 +3,10 @@
 // Date: 5/17/23
 
 //create buttons to add to the challenge, problems, and results sections with jQuery
+//color incr variables
+var rIncr = 0;
+var gIncr = 0;
+var bIncr = 0;
 
 //append a label for each section
 $("#challenge").append("<label id=challenge-label-id for=challenge-label>CHALLENGE</label>");
@@ -13,6 +17,55 @@ $("#results").append("<label id=results-label-id for=results-label>RESULTS</labe
 $("#challenge").append("<button id=challenge-button name=challenge-label></button>");
 $("#problems").append("<button id=problems-button name=problems-label></button>");
 $("#results").append("<button id=results-button name=results-label></button>");
+
+//change label font and make the text bold
+$("#challenge-label-id").css("font-weight", "bold");
+$("#problems-label-id").css("font-weight", "bold");
+$("#results-label-id").css("font-weight", "bold");
+$("#challenge-label-id").css("font-family", "courier");
+$("#problems-label-id").css("font-family", "courier");
+$("#results-label-id").css("font-family", "courier");
+
+//make the buttons bigger
+$("#challenge-button").css({"height":"20px", "width":"20px"})
+$("#problems-button").css({"height":"20px", "width":"20px"})
+$("#results-button").css({"height":"20px", "width":"20px"})
+
+//add click event to each button
+$("#challenge-button").click(function() {
+  rIncr+=40;
+  var colorv = "rgb("+rIncr+",0,0)";
+  var colorv2 = "rgb("+(295-rIncr)+","+"0"+","+rIncr+")";
+  console.log(colorv + colorv2);
+  //find the button's section and toggle the class "special"
+  $("#challenge").toggleClass("special");
+  $(".minor-section.special#challenge").css("background-color", colorv);
+  $("#challenge-label-id").css("color", colorv2);
+});
+
+$("#problems-button").click(function() {
+  gIncr+=40;
+  var colorv = "rgb(0,"+gIncr+",0)";
+  var colorv2 = "rgb("+gIncr+","+(255-gIncr)+","+gIncr+")";
+  console.log(colorv);
+  //find the button's section and toggle the class "special"
+  $("#problems").toggleClass("special");
+  $(".minor-section.special#problems").css("background-color", colorv);
+  $("#problems-label-id").css("color", colorv2);
+});
+
+$("#results-button").click(function() {
+  bIncr+=40;
+  var colorv = "rgb(0,0," +bIncr+")";
+  var colorv2 = "rgb(" + bIncr+","+"0"+","+(295-bIncr)+")";
+  console.log(colorv);
+  //find the button's section and toggle the class "special"
+  $("#results").toggleClass("special");
+  //increment the background color and decrement the button label color
+  $(".minor-section.special#results").css("background-color", colorv);
+  $("#results-label-id").css("color", colorv2);
+});
+
 
 
 
