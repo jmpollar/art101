@@ -33,7 +33,21 @@ $("#results-button").css({"height":"20px", "width":"20px"})
 
 //add click event to each button
 $("#challenge-button").click(function() {
-  rIncr+=40;
+  if(rIncr < 255 && rIncr+40 >= 255)
+  {
+    rIncr = 255;
+  }
+  else if(rIncr<255 && rIncr+40 < 255)
+  {
+    rIncr+=40;
+  }
+ 
+  if(rIncr == 255)
+  {
+    console.log("true");
+    $(".minor-section.special#challenge").css("background-color", "black");
+    rIncr = 0;
+  }
   var colorv = "rgb("+rIncr+",0,0)";
   var colorv2 = "rgb("+(295-rIncr)+","+"0"+","+rIncr+")";
   console.log(colorv + colorv2);
@@ -44,9 +58,23 @@ $("#challenge-button").click(function() {
 });
 
 $("#problems-button").click(function() {
-  gIncr+=40;
+  if(gIncr < 255 && gIncr+40 >= 255)
+  {
+    gIncr = 255;
+  }
+  else if(gIncr<255 && gIncr+40 < 255)
+  {
+    gIncr+=40;
+  }
+ 
+  if(gIncr == 255)
+  {
+    console.log("true");
+    $(".minor-section.special#problems").css("background-color", "black");
+    gIncr = 0;
+  }
   var colorv = "rgb(0,"+gIncr+",0)";
-  var colorv2 = "rgb("+gIncr+","+(255-gIncr)+","+gIncr+")";
+  var colorv2 = "rgb("+gIncr+","+(295-gIncr)+","+gIncr+")";
   console.log(colorv);
   //find the button's section and toggle the class "special"
   $("#problems").toggleClass("special");
@@ -55,7 +83,21 @@ $("#problems-button").click(function() {
 });
 
 $("#results-button").click(function() {
-  bIncr+=40;
+  if(bIncr < 255 && bIncr+40 >= 255)
+  {
+    bIncr = 255;
+  }
+  else if(bIncr<255 && bIncr+40 < 255)
+  {
+    bIncr+=40;
+  }
+ 
+  if(bIncr == 255)
+  {
+    console.log("true");
+    $(".minor-section.special#results").css("background-color", "black");
+    bIncr = 0;
+  }
   var colorv = "rgb(0,0," +bIncr+")";
   var colorv2 = "rgb(" + bIncr+","+"0"+","+(295-bIncr)+")";
   console.log(colorv);
