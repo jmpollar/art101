@@ -1,29 +1,18 @@
-// index.js - Use JavaScript to explore arrays and objects
+// index.js - Use JavaScript/jQuery to create document elements and assign event listeners
 // Author: James Pollard
-// Date: 4/27/2023
+// Date: 5/17/23
 
-// Constants
+//create buttons to add to the challenge, problems, and results sections with jQuery
 
-// Functions
-//declare myTransport array
-myTransport = ["car"];
+//append a label for each section
+$("#challenge").append("<label id=challenge-label-id for=challenge-label>CHALLENGE</label>");
+$("#problems").append("<label id=problems-label-id for=problems-label>PROBLEMS</label>");
+$("#results").append("<label id=results-label-id for=results-label>RESULTS</label>");
 
-currentYear = 2023;
+//append a button for each section using these labels
+$("#challenge").append("<button id=challenge-button name=challenge-label></button>");
+$("#problems").append("<button id=problems-button name=problems-label></button>");
+$("#results").append("<button id=results-button name=results-label></button>");
 
-//create an object for this primary transport
-myMainRide = {
-  year: 2022,
-  make: "Honda",
-  model: "Civic",
-  color: "Blue",
-  //internal function to determine age val
-  age: function() {
-    return currentYear - this.year;
-  }
-};
 
-//print out my transports
-document.writeln("I move with my " + myTransport + ".<br><br>");
-//print out myMainRide
-document.writeln("My Main Ride: <pre>", JSON.stringify(myMainRide, null, '\t'), "</pre");
-document.writeln("<pre>Age: ", myMainRide.age(), "</pre>");
+
