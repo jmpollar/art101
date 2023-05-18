@@ -71,10 +71,10 @@ $("#problems-button").click(function() {
   {
     console.log("true");
     $(".minor-section.special#problems").css("background-color", "black");
-    gIncr = 0;
+    gIncr=0;
   }
   var colorv = "rgb(0,"+gIncr+",0)";
-  var colorv2 = "rgb("+gIncr+","+(295-gIncr)+","+gIncr+")";
+  var colorv2 = "rgb("+gIncr+","+(255-gIncr)+","+gIncr+")";
   console.log(colorv);
   //find the button's section and toggle the class "special"
   $("#problems").toggleClass("special");
@@ -96,7 +96,7 @@ $("#results-button").click(function() {
   {
     console.log("true");
     $(".minor-section.special#results").css("background-color", "black");
-    bIncr = 0;
+    bIncr=0;
   }
   var colorv = "rgb(0,0," +bIncr+")";
   var colorv2 = "rgb(" + bIncr+","+"0"+","+(295-bIncr)+")";

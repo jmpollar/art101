@@ -12,6 +12,21 @@
 .minor-section.special#results h2{
   color: blue;
 }
+
+.minor-section.special#challenge p{
+  color: white;
+  font-weight: bolder;
+}
+
+.minor-section.special#problems p{
+  color: white;
+  font-weight: bolder;
+}
+
+.minor-section.special#results h3{
+  color: white;
+  font-weight: bolder;
+}
 .minor-section {
   padding: 10px;
   margin-bottom: 10px;
