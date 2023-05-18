@@ -1,29 +1,44 @@
-// index.js - Use JavaScript to explore arrays and objects
+// index.js - Use jQuery/JS and conditionals to assign a harry potter house based on input name
 // Author: James Pollard
-// Date: 4/27/2023
+// Date: 5/18/23
 
-// Constants
+//create function sortingHat() to take a string as an argument and uses mod to assign harry potter house based on length%4 and returns a string based on that, all run through a click event listener on a button
 
-// Functions
-//declare myTransport array
-myTransport = ["car"];
+function sortingHat(str)
+{
+  //cast input to string
+  inp = String(str); //returns undefined
+  console.log("str"+str);
+  var strLength = inp.length;
+  console.log(strLength);
+  var moddy = strLength%4;
+  console.log("MODDY:"+moddy);
 
-currentYear = 2023;
-
-//create an object for this primary transport
-myMainRide = {
-  year: 2022,
-  make: "Honda",
-  model: "Civic",
-  color: "Blue",
-  //internal function to determine age val
-  age: function() {
-    return currentYear - this.year;
+  if(moddy%4 === 0)
+  {
+    return "Gryffindor: House 0";
   }
-};
+  else if(moddy%4 === 1)
+  {
+    return "Ravenclaw: House 1";
+  }
+  else if(moddy%4 === 2)
+  {
+    return "Slytherin: House 2";
+  }
+  else if(moddy%4 === 3)
+  {
+    return "Hufflepuff: House 3";
+  }
+}
 
-//print out my transports
-document.writeln("I move with my " + myTransport + ".<br><br>");
-//print out myMainRide
-document.writeln("My Main Ride: <pre>", JSON.stringify(myMainRide, null, '\t'), "</pre");
-document.writeln("<pre>Age: ", myMainRide.age(), "</pre>");
+//create event listener attached to #button that gets the value of #input and assigns it to var name;
+//sends name as param to sortingHat
+//appends new paragraph to output that displays this return value
+$("#button").click(function() {
+  var name = $("#input").val();
+  console.log(name);
+  var house = sortingHat(name);
+  var str2Print = "<p id=sort-p>The Sorting Hat has sorted you into " + house + ".</p>";
+  $("#output").append(str2Print);
+})

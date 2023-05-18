@@ -1,6 +1,16 @@
 /* Here we can set styles for this lab page that we don't want to effect others pages */
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
+@font-face {
+  font-family: harryPotterFont;
+  src: url(../fonts/HarryPotter-ov4z.ttf);
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-family: harryPotterFont;
+}
+
 .minor-section {
   padding: 10px;
   margin-bottom: 10px;
@@ -11,7 +21,7 @@
 p {
   font-size: 18px;
   color: rgb(210, 141, 240);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: harryPotterFont;
 }
 
 ol {
@@ -21,7 +31,7 @@ ol {
 
 h2 {
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: harryPotterFont;
 }
 
 ul ul {
@@ -41,9 +51,29 @@ h3 {
   color: #fbd500;
 }
 
-.output {
+button {
+  width: 20px;
+  height: 20px;
+}
+
+label {
+  font-size: 35px;
+  -webkit-text-stroke: 0.5px black;
+  color: gold;
+  font-family: harryPotterFont;
+  letter-spacing: 2px;
+}
+
+#output h2{
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 1px;
+  font-family: harryPotterFont;
+  letter-spacing: 2px;
   line-height: 22px;
+}
+
+#output p {
+  -webkit-text-stroke: 0.1px white;
+  color: goldenrod;
+  font-family: harryPotterFont;
+  letter-spacing: 2px;
 }
