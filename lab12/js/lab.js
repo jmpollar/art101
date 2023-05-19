@@ -14,22 +14,25 @@ function sortingHat(str)
   var moddy = strLength%4;
   console.log("MODDY:"+moddy);
 
-  if(moddy%4 === 0)
+  /*if(moddy === 0)
   {
     return "Gryffindor: House 0";
   }
-  else if(moddy%4 === 1)
+  else if(moddy === 1)
   {
     return "Ravenclaw: House 1";
   }
-  else if(moddy%4 === 2)
+  else if(moddy === 2)
   {
     return "Slytherin: House 2";
   }
-  else if(moddy%4 === 3)
+  else if(moddy === 3)
   {
     return "Hufflepuff: House 3";
-  }
+  }*/
+  //refactored code
+  houseArr = ["Gryffindor: House 0", "Ravenclaw: House 1", "Slytherin: House 2", "Hufflepuff: House 3"];
+  return houseArr[moddy]; //%=0 is index 0, %=1 is index 1, (...)
 }
 
 //create event listener attached to #button that gets the value of #input and assigns it to var name;
