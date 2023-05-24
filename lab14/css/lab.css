@@ -47,3 +47,7 @@ h3 {
   letter-spacing: 1px;
   line-height: 22px;
 }
+
+sub {
+  font-size: 14px;
+}
