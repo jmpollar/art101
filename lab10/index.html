@@ -25,13 +25,13 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
 		<section id="cursed-section">
-			<label id="cursed-label" for="cursed-button">DON'T PRESS ME</label>
+			<label id="cursed-label" for="glitch-button">DON'T PRESS ME</label>
 			<button id="glitch-button" name="cursed-button"></button>
 		</section>
 		<section id="main-section">
-			<label id="name" for="name">Input your name: </label>
+			<label for="user-name">Input your name: </label>
 			<input type="text" id="user-name" name="name">
-			<label for="button-name">Press me!</label>
+			<label for="my-button">Press me!</label>
 			<button id="my-button" name="button-name"></button>
 			<h1>Lab 10 - JavaScript Events and Forms</h1>
 			<div class="minor-section">
@@ -42,21 +42,30 @@
 
 			<div class="minor-section">
 				<h2>Problems</h2>
-				<p>I had trouble figuring out how to add a name to the input. My solution was that I had to put a label tag to initialize the name variable then assign that to the input name next.</p>
-				<p>My first time testing tasks 2.1-2.3, index.html didn't display the results and thre the error: uName.split is not a function. My solution to this was adding type checking, but this wasn't the issue; I had accessed the entire element, and not its contents, so instead I accessed inputGet.value.</p>
-				<p>I also got the error: failed to execute write on Document (async error) on remote page. The solution was that I had to reload the page, as the JS code hadn't loaded into GitHub yet.</p>
+				<p>I had trouble figuring out how to add a name to the input. My solution was that I had to put a label
+					tag to initialize the name variable then assign that to the input name next.</p>
+				<p>My first time testing tasks 2.1-2.3, index.html didn't display the results and thre the error:
+					uName.split is not a function. My solution to this was adding type checking, but this wasn't the
+					issue; I had accessed the entire element, and not its contents, so instead I accessed
+					inputGet.value.</p>
+				<p>I also got the error: failed to execute write on Document (async error) on remote page. The solution
+					was that I had to reload the page, as the JS code hadn't loaded into GitHub yet.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>I thought this lab was fun. I especially enjoyed task x, and by the variable names and atmosphere of the "cursed button", you can probably tell I tried to make an ominous-yet-goofy approach to having some being in the program glitching out the page because you pressed the forbidden button too many times. It was a bit of a chore getting the pizza pictures to display properly, but once I did, I had a blast randomizing all sorts of filter values for the images.</p>
+				<p>I thought this lab was fun. I especially enjoyed task x, and by the variable names and atmosphere of
+					the "cursed button", you can probably tell I tried to make an ominous-yet-goofy approach to having
+					some being in the program glitching out the page because you pressed the forbidden button too many
+					times. It was a bit of a chore getting the pizza pictures to display properly, but once I did, I had
+					a blast randomizing all sorts of filter values for the images.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Results</h2>
 				<p></p>
-				<label for="output-name"><i>Output</i></label>
-				<div id="output" name="output-name">
+				<h3>Output</br>//////////////////////////</h3>
+				<div id="output" name="output-name"></div>
 
 				</div>
 			</div>
