@@ -9,9 +9,9 @@ var gIncr = 0;
 var bIncr = 0;
 
 //append a label for each section
-$("#challenge").append("<label id=challenge-label-id for=challenge-label>CHALLENGE</label>");
-$("#problems").append("<label id=problems-label-id for=problems-label>PROBLEMS</label>");
-$("#results").append("<label id=results-label-id for=results-label>RESULTS</label>");
+$("#challenge").append("<label id=challenge-label-id for=challenge-button>CHALLENGE</label>");
+$("#problems").append("<label id=problems-label-id for=problems-button>PROBLEMS</label>");
+$("#results").append("<label id=results-label-id for=results-button>RESULTS</label>");
 
 //append a button for each section using these labels
 $("#challenge").append("<button id=challenge-button name=challenge-label></button>");
