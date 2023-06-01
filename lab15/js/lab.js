@@ -1,29 +1,24 @@
-// index.js - Use JavaScript to explore arrays and objects
+// index.js - Use AJAX to get and output information from an API
 // Author: James Pollard
-// Date: 4/27/2023
+// Date: 5/31/2023
 
-// Constants
+//using the core $.ajax() method
+function getStuff(){$.ajax({
+  // The URL for the request (from the api docs)
+  url:"https://catfact.ninja/fact",
+  // Whether this is a POST or GET request
+  type:"GET",
+  // The data to send (will be converted to a query string)
+  data:{},
+})
+//  All the action goes here
+.done(function(data){
+  //send the data to console and output HTML
+  console.log("Cat Fact!</br>" + data.fact);
+  $("#get-stuff").html("Cat Fact!</br>" + data.fact);
+})
+}
+//call the function on button click
+$("#activate").click(getStuff);
 
-// Functions
-//declare myTransport array
-myTransport = ["car"];
 
-currentYear = 2023;
-
-//create an object for this primary transport
-myMainRide = {
-  year: 2022,
-  make: "Honda",
-  model: "Civic",
-  color: "Blue",
-  //internal function to determine age val
-  age: function() {
-    return currentYear - this.year;
-  }
-};
-
-//print out my transports
-document.writeln("I move with my " + myTransport + ".<br><br>");
-//print out myMainRide
-document.writeln("My Main Ride: <pre>", JSON.stringify(myMainRide, null, '\t'), "</pre");
-document.writeln("<pre>Age: ", myMainRide.age(), "</pre>");

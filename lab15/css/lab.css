@@ -42,8 +42,9 @@ h3 {
 }
 
 .output {
-  color: white;
+  color: rgb(255, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   line-height: 22px;
 }
+
