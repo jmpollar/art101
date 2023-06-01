@@ -12,6 +12,7 @@ p {
   font-size: 18px;
   color: rgb(210, 141, 240);
   font-family: 'Courier New', Courier, monospace;
+  word-wrap: break-word;
 }
 
 ol {
