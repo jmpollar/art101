@@ -78,3 +78,11 @@ $("#next-button").click(function () {
   var urlStr = "https://xkcd.com/" + comicNum + "/info.0.json";
   getAndPutData(urlStr);
 });
+
+$("#submit-button").click(function () {
+  //get the input value and assign to comicNum
+  comicNum = $("#input").val();
+  //URL string
+  var urlStr = "https://xkcd.com/" + comicNum + "/info.0.json";
+  getAndPutData(urlStr);
+});
