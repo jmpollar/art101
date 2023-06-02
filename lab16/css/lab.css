@@ -1,5 +1,9 @@
 /* Here we can set styles for this lab page that we don't want to effect others pages */
-
+@font-face {
+  font-family: comicSans;
+  src: url(../fonts/COMIC.TTF);
+  letter-spacing: 2px;
+}
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
 .minor-section {
   padding: 10px;
@@ -46,4 +50,17 @@ h3 {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   line-height: 22px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: comicSans;
+}
+
+header {
+  color: white;
+  text-align: center;
+  font-family: comicSans;
+  font-size: 40px;
 }
